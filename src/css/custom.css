@@ -1,0 +1,120 @@
+/**
+ * Any CSS you add here will be applied to all pages of your Docusaurus site.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #1e88e5; /* A vibrant blue */
+  --ifm-color-primary-dark: #1976d2;
+  --ifm-color-primary-darker: #1769aa;
+  --ifm-color-primary-darkest: #115293;
+  --ifm-color-primary-light: #42a5f5;
+  --ifm-color-primary-lighter: #64b5f6;
+  --ifm-color-primary-lightest: #90caf9;
+
+  /* Custom dark mode colors for a modern tech look */
+  --ifm-background-color: #1a1a2e; /* Dark blue/purple background */
+  --ifm-background-surface-color: #16213e; /* Slightly lighter surface for cards/blocks */
+  --ifm-font-color-base: #e0e0e0; /* Light gray for main text */
+  --ifm-font-color-secondary: #a0a0a0; /* Slightly darker gray for secondary text */
+  --ifm-code-background: #0f3460; /* Darker blue for code blocks */
+  --ifm-code-font-size: 90%;
+  --ifm-heading-color: #ffffff; /* White for headings */
+}
+
+/* Specific adjustments for dark mode */
+html[data-theme='dark'] {
+  --ifm-color-primary: #1e88e5;
+  --ifm-color-primary-dark: #1976d2;
+  --ifm-color-primary-darker: #1769aa;
+  --ifm-color-primary-darkest: #115293;
+  --ifm-color-primary-light: #42a5f5;
+  --ifm-color-primary-lighter: #64b5f6;
+  --ifm-color-primary-lightest: #90caf9;
+
+  --ifm-background-color: #1a1a2e;
+  --ifm-background-surface-color: #16213e;
+  --ifm-font-color-base: #e0e0e0;
+  --ifm-font-color-secondary: #a0a0a0;
+  --ifm-code-background: #0f3460;
+  --ifm-heading-color: #ffffff;
+}
+
+/* Custom styles for components to enhance the modern look */
+.navbar {
+  background-color: var(--ifm-background-surface-color);
+  border-bottom: 1px solid #2e2e4a;
+}
+
+.footer {
+  background-color: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+}
+
+.menu__link {
+  color: var(--ifm-font-color-base);
+}
+
+.menu__link--active {
+  color: var(--ifm-color-primary);
+  background-color: var(--ifm-code-background);
+}
+
+.theme-doc-sidebar-item-link-active {
+  color: var(--ifm-color-primary);
+}
+
+/* Code block specific styling */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #7a7a7a;
+}
+
+.token.punctuation {
+  color: #c5c5c5;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #ff6347; /* Tomato red for properties/numbers */
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #98fb98; /* Pale green for strings */
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #6a0dad; /* Dark purple for operators */
+}
+
+.token.atrule,
+.token.keyword {
+  color: #add8e6; /* Light blue for keywords */
+}
+
+.token.function,
+.token.class-name {
+  color: #ffd700; /* Gold for functions/class names */
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #ffa07a; /* Light salmon for regex/variables */
+}
