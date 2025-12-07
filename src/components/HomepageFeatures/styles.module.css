@@ -1,11 +1,129 @@
-.features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
+.featuresSection {
+  padding: 4rem 2rem;
+  background-color: #0b0b0f;
   width: 100%;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.featureCard {
+  background: rgba(26, 26, 36, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(122, 60, 255, 0.5);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  box-shadow:
+    0 8px 32px rgba(11, 11, 15, 0.3),
+    inset 0 0 10px rgba(122, 60, 255, 0.1);
+}
+
+.featureCard:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 20px rgba(122, 60, 255, 0.6),
+    inset 0 0 15px rgba(122, 60, 255, 0.2);
+  border: 1px solid rgba(122, 60, 255, 0.8);
+}
+
+.featureIconContainer {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.featureIcon {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 0 8px rgba(122, 60, 255, 0.7));
+}
+
+.neonStroke {
+  stroke: #7a3cff;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 5px #7a3cff);
+  animation: pulseGlow 2s infinite alternate;
+}
+
+.neonGlow {
+  fill: #7a3cff;
+  filter: drop-shadow(0 0 8px #7a3cff);
+  animation: blink 3s infinite;
+}
+
+.featureTitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  margin: 0 0 1rem 0;
+  text-shadow:
+    0 0 5px #7a3cff,
+    0 0 10px #7a3cff;
+}
+
+.featureDescription {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #bfbfc7;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@keyframes pulseGlow {
+  0% {
+    filter: drop-shadow(0 0 5px #7a3cff);
+  }
+  100% {
+    filter: drop-shadow(0 0 15px #7a3cff);
+  }
+}
+
+@keyframes blink {
+  0%, 90%, 100% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.5;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .featuresSection {
+    padding: 2rem 1rem;
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .featureCard {
+    padding: 1.5rem;
+  }
+
+  .featureTitle {
+    font-size: 1.2rem;
+  }
+
+  .featureDescription {
+    font-size: 0.9rem;
+  }
+
+  .featureIcon {
+    width: 60px;
+    height: 60px;
+  }
 }
