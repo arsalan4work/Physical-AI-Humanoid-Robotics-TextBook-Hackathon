@@ -78,8 +78,8 @@ const config: Config = {
     navbar: {
       title: 'Physical AI & Humanoid Robotics',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg', // Replace with your actual logo path
+        alt: 'Physical AI & Humanoid Robotics Logo',
+        src: 'img/logo.svg',
       },
       items: [
         {
@@ -99,25 +99,33 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'GitHub',
           items: [
             {
-              label: 'Course',
-              to: '/docs/intro',
+              label: 'Repository',
+              href: 'https://github.com/arsalan4work/physical-ai-and-humanoid-robotics-text-book',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Course Outline',
           items: [
             {
-              label: 'GitHub',
-              href: 'https://github.com/arsalan4work',
+              label: 'Module 1: ROS 2 Fundamentals',
+              to: '/docs/modules/Module 01 ROS2-Fundamentals/chapter-01-intro',
+            },
+            {
+              label: 'Module 2: Digital Twin Concepts',
+              to: '/docs/modules/Module 02 Digital-Twin/chapter-01-intro',
+            },
+            {
+              label: 'Module 3: VLA Robotics',
+              to: '/docs/modules/Module 03 VLA-Robotics/chapter-01-intro',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics. Built with Love by Dev Arsalan.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Textbook. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,

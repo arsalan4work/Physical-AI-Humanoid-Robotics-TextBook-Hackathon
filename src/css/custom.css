@@ -41,43 +41,142 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Orbitron', sans-serif;
 }
 
-/* Navbar and Footer Styling */
+/* Navbar styling with dark futuristic robotics theme */
 .navbar {
-  background-color: #1a1a24; /* Dark UI gray */
-  border-bottom: 1px solid var(--ifm-color-primary-dark); /* Neon accent */
+  background-color: #0b0b0f !important; /* Black metallic background */
+  border-bottom: 2px solid #7a3cff !important; /* Neon purple border */
+  box-shadow: 0 0 15px rgba(122, 60, 255, 0.3);
+  animation: fadeInNavbar 0.5s ease-in;
+}
+
+@keyframes fadeInNavbar {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar__inner {
+  animation: fadeInNavbar 0.5s ease-in;
+}
+
+.navbar__title {
+  color: #ffffff !important; /* White text */
+  font-family: 'Orbitron', sans-serif;
+}
+
+.navbar__link {
+  color: #e0e0e0 !important; /* Light gray text */
+  font-family: 'Orbitron', sans-serif;
+  transition: all 0.3s ease;
 }
 
 .navbar__link:hover {
-  color: var(--ifm-color-primary-light);
+  color: #7a3cff !important; /* Purple neon glow on hover */
+  text-shadow: 0 0 8px rgba(122, 60, 255, 0.8);
 }
 
+.navbar__item {
+  animation: fadeInNavbar 0.5s ease-in;
+  animation-delay: calc(var(--navbar-item-index) * 0.1s);
+}
+
+/* Mobile menu styling */
+.navbar-sidebar {
+  background-color: #0b0b0f !important; /* Black metallic background */
+}
+
+.navbar-sidebar__brand {
+  background-color: #0b0b0f !important;
+  border-bottom: 1px solid #7a3cff !important; /* Neon purple border */
+}
+
+.navbar-sidebar__close {
+  color: #e0e0e0 !important;
+}
+
+.navbar-sidebar .menu__link {
+  color: #e0e0e0 !important;
+}
+
+.navbar-sidebar .menu__link:hover {
+  color: #7a3cff !important;
+  background-color: rgba(122, 60, 255, 0.1) !important;
+}
+
+/* Footer styling with dark futuristic robotics theme */
 .footer {
-  background-color: #1a1a24; /* Dark UI gray */
-  color: var(--ifm-font-color-base);
-  border-top: 1px solid var(--ifm-color-primary-dark); /* Neon accent */
+  background: linear-gradient(to bottom, #0b0b0f, #1a1a24) !important; /* Dark gradient */
+  border-top: 2px solid #7a3cff !important; /* Neon purple glowing border */
+  color: #e0e0e0 !important;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  box-shadow: 0 -5px 20px rgba(122, 60, 255, 0.2);
+}
+
+.footer__title {
+  color: #ffffff !important;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
 }
 
 .footer__link-item {
-  color: var(--ifm-font-color-base);
+  color: #e0e0e0 !important;
+  font-family: 'Orbitron', sans-serif;
+  transition: all 0.3s ease;
 }
 
 .footer__link-item:hover {
-  color: var(--ifm-color-primary-light);
+  color: #7a3cff !important;
+  text-shadow: 0 0 8px rgba(122, 60, 255, 0.8);
+  transform: translateX(3px);
+}
+
+.footer__copyright {
+  color: #a0a0a0 !important;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(122, 60, 255, 0.3);
+}
+
+/* Social icons styling */
+.footer__social {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.footer__social-item {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.footer__social-item:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(122, 60, 255, 0.8);
 }
 
 /* Sidebar Styling */
 .menu__link {
-  color: var(--ifm-font-color-base);
+  color: #e0e0e0 !important;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .menu__link--active {
-  color: var(--ifm-color-primary-light);
-  background-color: rgba(122, 60, 255, 0.2); /* Subtle purple glow */
-  border-right: 3px solid var(--ifm-color-primary);
+  color: #7a3cff !important;
+  background-color: rgba(122, 60, 255, 0.1) !important;
+  border-right: 3px solid #7a3cff !important;
 }
 
 .theme-doc-sidebar-item-link-active {
-  color: var(--ifm-color-primary-light);
+  color: #7a3cff !important;
   font-weight: bold;
 }
 
@@ -140,10 +239,6 @@ h1, h2, h3, h4, h5, h6 {
 body {
   background: linear-gradient(to bottom right, var(--ifm-background-color), var(--ifm-background-surface-color));
   background-attachment: fixed;
-}
-
-.navbar, .footer {
-  box-shadow: 0 0 10px rgba(122, 60, 255, 0.5);
 }
 
 .menu__list-item-collapsible {
