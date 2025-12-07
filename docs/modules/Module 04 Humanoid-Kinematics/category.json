@@ -1,0 +1,16 @@
+{
+  "label": "Module 4: Humanoid Kinematics",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "title": "Humanoid Kinematics, Locomotion, and Manipulation",
+    "description": "Learn the principles of humanoid robot movement, kinematics, gait, balance, and manipulation."
+  },
+  "items": [
+    "modules/Module 04 Humanoid-Kinematics/chapter-01-intro",
+    "modules/Module 04 Humanoid-Kinematics/chapter-02-forward-inverse",
+    "modules/Module 04 Humanoid-Kinematics/chapter-03-gait-balance",
+    "modules/Module 04 Humanoid-Kinematics/chapter-04-manipulation-control",
+    "modules/Module 04 Humanoid-Kinematics/chapter-05-advanced-applications"
+  ]
+}

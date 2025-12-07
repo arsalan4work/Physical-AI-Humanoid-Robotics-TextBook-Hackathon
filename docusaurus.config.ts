@@ -43,7 +43,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/arsalan4work/physical-ai-and-humanoid-robotics-text-book/tree/main/',
+            'https://github.com/arsalan4work/Physical-AI-Humanoid-Robotics-TextBook-Hackathon',
         },
         blog: {
           showReadingTime: true,
@@ -54,7 +54,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/arsalan4work/physical-ai-and-humanoid-robotics-text-book/tree/main/',
+            'https://github.com/arsalan4work/Physical-AI-Humanoid-Robotics-TextBook-Hackathon',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -69,7 +69,6 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: false, // Enable to allow users to switch between dark and light modes
@@ -77,10 +76,6 @@ const config: Config = {
     },
     navbar: {
       title: 'Physical AI & Humanoid Robotics',
-      logo: {
-        alt: 'Physical AI & Humanoid Robotics Logo',
-        src: 'img/logo.svg',
-      },
       items: [
         {
           type: 'docSidebar',

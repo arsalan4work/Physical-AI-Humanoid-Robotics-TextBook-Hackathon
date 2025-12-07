@@ -59,7 +59,7 @@ const HeroSection = () => {
             <a href="/docs/intro" className={styles.primaryButton}>
               Start Learning
             </a>
-            <a href="/docs/modules" className={styles.secondaryButton}>
+            <a href="/docs/intro" className={styles.secondaryButton}>
               View Modules
             </a>
           </div>

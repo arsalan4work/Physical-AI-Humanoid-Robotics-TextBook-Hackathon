@@ -23,7 +23,7 @@
 - [x] T005 Create `docs/assets/` directory for shared assets
 - [x] T006 Create `docs/assets/diagrams/` directory for diagrams
 - [x] T007 Create `docs/assets/code-samples/` directory for code samples
-- [ ] T008 Create `docs/modules/` directory for weekly breakdowns and assessments (This task remains as is, as `docs/modules/` is for breakdowns and assessments, not chapters)
+- [x] T008 Create `docs/modules/` directory for weekly breakdowns and assessments (This task remains as is, as `docs/modules/` is for breakdowns and assessments, not chapters)
 
 ---
 
@@ -45,14 +45,14 @@
 
 ### Implementation for User Story 1
 
-- [ ] T009 [US1] Create `docs/module-01-ros2-fundamentals/` directory
-- [ ] T010 [US1] Create `docs/module-01-ros2-fundamentals/category.json`
-- [ ] T011 [US1] Generate Beginner explanation `docs/module-01-ros2-fundamentals/chapter-01-intro.md`
-- [ ] T012 [US1] Generate Intermediate breakdown of core concepts `docs/module-01-ros2-fundamentals/chapter-02-basic-concepts.md`
-- [ ] T013 [US1] Generate Expert depth with functional code samples `docs/module-01-ros2-fundamentals/chapter-03-code-examples.md`
-- [ ] T014 [US1] Create ROS 2 Python publisher code sample in `docs/assets/code-samples/ros2/publisher.py`
-- [ ] T015 [US1] Create ROS 2 Python subscriber code sample in `docs/assets/code-samples/ros2/subscriber.py`
-- [ ] T016 [US1] Add exercises and assessments to `docs/module-01-ros2-fundamentals/chapter-01-intro.md` and `docs/module-01-ros2-fundamentals/chapter-02-basic-concepts.md`
+- [x] T009 [US1] Create `docs/module-01-ros2-fundamentals/` directory
+- [x] T010 [US1] Create `docs/module-01-ros2-fundamentals/category.json`
+- [x] T011 [US1] Generate Beginner explanation `docs/module-01-ros2-fundamentals/chapter-01-intro.md`
+- [x] T012 [US1] Generate Intermediate breakdown of core concepts `docs/module-01-ros2-fundamentals/chapter-02-basic-concepts.md`
+- [x] T013 [US1] Generate Expert depth with functional code samples `docs/module-01-ros2-fundamentals/chapter-03-code-examples.md`
+- [x] T014 [US1] Create ROS 2 Python publisher code sample in `docs/assets/code-samples/ros2/publisher.py`
+- [x] T015 [US1] Create ROS 2 Python subscriber code sample in `docs/assets/code-samples/ros2/subscriber.py`
+- [x] T016 [US1] Add exercises and assessments to `docs/modules/Module 01 ROS2-Fundamentals/chapter-01-intro.md` and `docs/modules/Module 01 ROS2-Fundamentals/chapter-02-basic-concepts.md`
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -66,14 +66,14 @@
 
 ### Implementation for User Story 2
 
-- [ ] T017 [US2] Create `docs/module-02-digital-twin/` directory
-- [ ] T018 [US2] Create `docs/module-02-digital-twin/category.json`
-- [ ] T019 [US2] Generate Beginner explanation `docs/module-02-digital-twin/chapter-01-intro.md`
-- [ ] T020 [US2] Generate Intermediate/Expert Gazebo simulation content `docs/module-02-digital-twin/chapter-02-gazebo-simulation.md`
-- [ ] T021 [US2] Generate Intermediate/Expert Unity visualization content `docs/module-02-digital-twin/chapter-03-unity-visualization.md`
-- [ ] T022 [US2] Create Gazebo robot model (URDF/SDF) in `docs/assets/code-samples/gazebo/simple_robot.urdf`
-- [ ] T023 [US2] Create optional Unity C# example in `docs/assets/code-samples/unity/robot_viz.cs`
-- [ ] T024 [US2] Add exercises and assessments to `docs/module-02-digital-twin/chapter-01-intro.md` and `docs/module-02-digital-twin/chapter-02-gazebo-simulation.md`
+- [x] T017 [US2] Create `docs/module-02-digital-twin/` directory
+- [x] T018 [US2] Create `docs/module-02-digital-twin/category.json`
+- [x] T019 [US2] Generate Beginner explanation `docs/module-02-digital-twin/chapter-01-intro.md`
+- [x] T020 [US2] Generate Intermediate/Expert Gazebo simulation content `docs/module-02-digital-twin/chapter-02-gazebo-simulation.md`
+- [x] T021 [US2] Generate Intermediate/Expert Unity visualization content `docs/module-02-digital-twin/chapter-03-unity-visualization.md`
+- [x] T022 [US2] Create Gazebo robot model (URDF/SDF) in `docs/assets/code-samples/gazebo/simple_robot.urdf`
+- [x] T023 [US2] Create optional Unity C# example in `docs/assets/code-samples/unity/robot_viz.cs`
+- [x] T024 [US2] Add exercises and assessments to `docs/modules/Module 02 Digital-Twin/chapter-01-intro.md` and `docs/modules/Module 02 Digital-Twin/chapter-02-gazebo-simulation.md`
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
@@ -107,12 +107,15 @@
 
 ### Implementation for User Story 4 (Structure Only - No Content Generation)
 
-- [ ] T032 [US4] Create `docs/module-04-humanoid-kinematics/` directory
-- [ ] T033 [US4] Create `docs/module-04-humanoid-kinematics/category.json`
-- [ ] T034 [US4] Placeholder for `docs/module-04-humanoid-kinematics/chapter-01-intro.md`
-- [ ] T035 [US4] Placeholder for `docs/module-04-humanoid-kinematics/chapter-02-forward-inverse.md`
-- [ ] T036 [US4] Placeholder for `docs/assets/code-samples/urdf/humanoid_arm.urdf`
-- [ ] T037 [US4] Placeholder for exercises and assessments in `docs/module-04-humanoid-kinematics/chapter-01-intro.md` and `docs/module-04-humanoid-kinematics/chapter-02-forward-inverse.md`
+- [x] T032 [US4] Create `docs/module-04-humanoid-kinematics/` directory
+- [x] T033 [US4] Create `docs/module-04-humanoid-kinematics/category.json`
+- [x] T034 [US4] Generate `docs/module-04-humanoid-kinematics/chapter-01-intro.md`
+- [x] T035 [US4] Generate `docs/module-04-humanoid-kinematics/chapter-02-forward-inverse.md`
+- [x] T038 [US4] Generate `docs/module-04-humanoid-kinematics/chapter-03-gait-balance.md`
+- [x] T039 [US4] Generate `docs/module-04-humanoid-kinematics/chapter-04-manipulation-control.md`
+- [x] T040 [US4] Generate `docs/module-04-humanoid-kinematics/chapter-05-advanced-applications.md`
+- [x] T036 [US4] Create URDF model in `docs/assets/code-samples/urdf/humanoid_arm.urdf`
+- [x] T037 [US4] Add exercises and assessments to `docs/modules/Module 04 Humanoid-Kinematics/chapter-01-intro.md` and `docs/modules/Module 04 Humanoid-Kinematics/chapter-02-forward-inverse.md`
 
 ---
 
