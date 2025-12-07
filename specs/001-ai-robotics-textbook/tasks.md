@@ -8,19 +8,22 @@
 ## Path Conventions
 
 - All content will reside under the `docs/` directory at the repository root.
+- Chapters will now follow a `module-XX-name/chapter-XX-name.md` structure.
+
+---
 
 ## Phase 1: Setup (Shared Infrastructure)
 
 **Purpose**: Project initialization and basic Docusaurus structure.
 
-- [ ] T001 Create `docs/` directory at repository root
-- [ ] T002 Create `docs/_category_.json` for sidebar configuration
-- [ ] T003 Create `docs/intro.md` as the main introduction page
-- [ ] T004 Create `docs/chapters/` directory for module chapters
-- [ ] T005 Create `docs/assets/` directory for shared assets
-- [ ] T006 Create `docs/assets/diagrams/` directory for diagrams
-- [ ] T007 Create `docs/assets/code-samples/` directory for code samples
-- [ ] T008 Create `docs/modules/` directory for weekly breakdowns and assessments
+- [x] T001 Create `docs/` directory at repository root
+- [x] T002 Create `docs/_category_.json` for sidebar configuration
+- [x] T003 Create `docs/intro.md` as the main introduction page
+- [x] T004 Create `docs/chapters/` directory for module chapters
+- [x] T005 Create `docs/assets/` directory for shared assets
+- [x] T006 Create `docs/assets/diagrams/` directory for diagrams
+- [x] T007 Create `docs/assets/code-samples/` directory for code samples
+- [ ] T008 Create `docs/modules/` directory for weekly breakdowns and assessments (This task remains as is, as `docs/modules/` is for breakdowns and assessments, not chapters)
 
 ---
 
@@ -42,14 +45,14 @@
 
 ### Implementation for User Story 1
 
-- [ ] T009 [US1] Create `docs/chapters/ros2-fundamentals/` directory
-- [ ] T010 [US1] Create `docs/chapters/ros2-fundamentals/_category_.json`
-- [ ] T011 [US1] Generate Beginner explanation `docs/chapters/ros2-fundamentals/intro.md`
-- [ ] T012 [US1] Generate Intermediate breakdown of core concepts `docs/chapters/ros2-fundamentals/basic-concepts.md`
-- [ ] T013 [US1] Generate Expert depth with functional code samples `docs/chapters/ros2-fundamentals/code-examples.md`
+- [ ] T009 [US1] Create `docs/module-01-ros2-fundamentals/` directory
+- [ ] T010 [US1] Create `docs/module-01-ros2-fundamentals/category.json`
+- [ ] T011 [US1] Generate Beginner explanation `docs/module-01-ros2-fundamentals/chapter-01-intro.md`
+- [ ] T012 [US1] Generate Intermediate breakdown of core concepts `docs/module-01-ros2-fundamentals/chapter-02-basic-concepts.md`
+- [ ] T013 [US1] Generate Expert depth with functional code samples `docs/module-01-ros2-fundamentals/chapter-03-code-examples.md`
 - [ ] T014 [US1] Create ROS 2 Python publisher code sample in `docs/assets/code-samples/ros2/publisher.py`
 - [ ] T015 [US1] Create ROS 2 Python subscriber code sample in `docs/assets/code-samples/ros2/subscriber.py`
-- [ ] T016 [US1] Add exercises and assessments to `docs/chapters/ros2-fundamentals/intro.md` and `docs/chapters/ros2-fundamentals/basic-concepts.md`
+- [ ] T016 [US1] Add exercises and assessments to `docs/module-01-ros2-fundamentals/chapter-01-intro.md` and `docs/module-01-ros2-fundamentals/chapter-02-basic-concepts.md`
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -63,14 +66,14 @@
 
 ### Implementation for User Story 2
 
-- [ ] T017 [US2] Create `docs/chapters/digital-twin/` directory
-- [ ] T018 [US2] Create `docs/chapters/digital-twin/_category_.json`
-- [ ] T019 [US2] Generate Beginner explanation `docs/chapters/digital-twin/intro.md`
-- [ ] T020 [US2] Generate Intermediate/Expert Gazebo simulation content `docs/chapters/digital-twin/gazebo-simulation.md`
-- [ ] T021 [US2] Generate Intermediate/Expert Unity visualization content `docs/chapters/digital-twin/unity-visualization.md`
+- [ ] T017 [US2] Create `docs/module-02-digital-twin/` directory
+- [ ] T018 [US2] Create `docs/module-02-digital-twin/category.json`
+- [ ] T019 [US2] Generate Beginner explanation `docs/module-02-digital-twin/chapter-01-intro.md`
+- [ ] T020 [US2] Generate Intermediate/Expert Gazebo simulation content `docs/module-02-digital-twin/chapter-02-gazebo-simulation.md`
+- [ ] T021 [US2] Generate Intermediate/Expert Unity visualization content `docs/module-02-digital-twin/chapter-03-unity-visualization.md`
 - [ ] T022 [US2] Create Gazebo robot model (URDF/SDF) in `docs/assets/code-samples/gazebo/simple_robot.urdf`
 - [ ] T023 [US2] Create optional Unity C# example in `docs/assets/code-samples/unity/robot_viz.cs`
-- [ ] T024 [US2] Add exercises and assessments to `docs/chapters/digital-twin/intro.md` and `docs/chapters/digital-twin/gazebo-simulation.md`
+- [ ] T024 [US2] Add exercises and assessments to `docs/module-02-digital-twin/chapter-01-intro.md` and `docs/module-02-digital-twin/chapter-02-gazebo-simulation.md`
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
@@ -84,13 +87,13 @@
 
 ### Implementation for User Story 3
 
-- [ ] T025 [US3] Create `docs/chapters/vla-robotics/` directory
-- [ ] T026 [US3] Create `docs/chapters/vla-robotics/_category_.json`
-- [ ] T027 [US3] Generate Beginner explanation `docs/chapters/vla-robotics/intro.md`
-- [ ] T028 [US3] Generate Intermediate breakdown of VLA systems `docs/chapters/vla-robotics/architecture.md`
-- [ ] T029 [US3] Generate Expert depth with functional code samples `docs/chapters/vla-robotics/pipelines-examples.md`
-- [ ] T030 [US3] Create Isaac Sim scripts for VLA in `docs/assets/code-samples/isaac-sim/vla_agent.py`
-- [ ] T031 [US3] Add exercises and assessments to `docs/chapters/vla-robotics/intro.md` and `docs/chapters/vla-robotics/architecture.md`
+- [x] T025 [US3] Create `docs/module-03-vla-robotics/` directory
+- [x] T026 [US3] Create `docs/module-03-vla-robotics/category.json`
+- [x] T027 [US3] Generate Beginner explanation `docs/module-03-vla-robotics/chapter-01-intro.md`
+- [x] T028 [US3] Generate Intermediate breakdown of VLA systems `docs/module-03-vla-robotics/chapter-02-architecture.md`
+- [x] T029 [US3] Generate Expert depth with functional code samples `docs/module-03-vla-robotics/chapter-03-pipelines-examples.md`
+- [x] T030 [US3] Create Isaac Sim scripts for VLA in `docs/assets/code-samples/isaac-sim/vla_agent.py`
+- [x] T031 [US3] Add exercises and assessments to `docs/module-03-vla-robotics/chapter-01-intro.md` and `docs/module-03-vla-robotics/chapter-02-architecture.md`
 
 **Checkpoint**: All user stories should now be independently functional
 
@@ -102,14 +105,14 @@
 
 **Independent Test**: Student works through the chapter, solves problems, and explains forward and inverse kinematics concepts.
 
-### Implementation for User Story 4
+### Implementation for User Story 4 (Structure Only - No Content Generation)
 
-- [ ] T032 [US4] Create `docs/chapters/humanoid-kinematics/` directory
-- [ ] T033 [US4] Create `docs/chapters/humanoid-kinematics/_category_.json`
-- [ ] T034 [US4] Generate Beginner explanation `docs/chapters/humanoid-kinematics/intro.md`
-- [ ] T035 [US4] Generate Intermediate/Expert kinematics content `docs/chapters/humanoid-kinematics/forward-inverse.md`
-- [ ] T036 [US4] Create URDF/SDF fragments for humanoid robots in `docs/assets/code-samples/urdf/humanoid_arm.urdf`
-- [ ] T037 [US4] Add exercises and assessments to `docs/chapters/humanoid-kinematics/intro.md` and `docs/chapters/humanoid-kinematics/forward-inverse.md`
+- [ ] T032 [US4] Create `docs/module-04-humanoid-kinematics/` directory
+- [ ] T033 [US4] Create `docs/module-04-humanoid-kinematics/category.json`
+- [ ] T034 [US4] Placeholder for `docs/module-04-humanoid-kinematics/chapter-01-intro.md`
+- [ ] T035 [US4] Placeholder for `docs/module-04-humanoid-kinematics/chapter-02-forward-inverse.md`
+- [ ] T036 [US4] Placeholder for `docs/assets/code-samples/urdf/humanoid_arm.urdf`
+- [ ] T037 [US4] Placeholder for exercises and assessments in `docs/module-04-humanoid-kinematics/chapter-01-intro.md` and `docs/module-04-humanoid-kinematics/chapter-02-forward-inverse.md`
 
 ---
 
@@ -161,9 +164,9 @@
 
 ```bash
 # Example of parallel tasks for initial content creation in US1:
-Task: "Generate Beginner explanation docs/chapters/ros2-fundamentals/intro.md"
-Task: "Generate Intermediate breakdown of core concepts docs/chapters/ros2-fundamentals/basic-concepts.md"
-Task: "Generate Expert depth with functional code samples docs/chapters/ros2-fundamentals/code-examples.md"
+Task: "Generate Beginner explanation docs/module-01-ros2-fundamentals/chapter-01-intro.md"
+Task: "Generate Intermediate breakdown of core concepts docs/module-01-ros2-fundamentals/chapter-02-basic-concepts.md"
+Task: "Generate Expert depth with functional code samples docs/module-01-ros2-fundamentals/chapter-03-code-examples.md"
 
 # Example of parallel tasks for code sample creation:
 Task: "Create ROS 2 Python publisher code sample in docs/assets/code-samples/ros2/publisher.py"
@@ -178,7 +181,7 @@ Task: "Create ROS 2 Python subscriber code sample in docs/assets/code-samples/ro
 
 1. Complete Phase 1: Setup
 2. Complete Phase 3: User Story 1
-3. **STOP and VALIDATE**: Review `docs/chapters/ros2-fundamentals/` content and verify code samples.
+3. **STOP and VALIDATE**: Review `docs/module-01-ros2-fundamentals/` content and verify code samples.
 4. Deploy/demo if ready.
 
 ### Incremental Delivery

@@ -1,0 +1,14 @@
+# Dependencies
+/node_modules
+
+# Build artifacts
+/build
+/dist
+.docusaurus
+
+# Configuration and environment files
+.env*
+*.log*
+
+# Misc
+.DS_Store
