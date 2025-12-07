@@ -4,76 +4,93 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #1e88e5; /* A vibrant blue */
-  --ifm-color-primary-dark: #1976d2;
-  --ifm-color-primary-darker: #1769aa;
-  --ifm-color-primary-darkest: #115293;
-  --ifm-color-primary-light: #42a5f5;
-  --ifm-color-primary-lighter: #64b5f6;
-  --ifm-color-primary-lightest: #90caf9;
+  --ifm-color-primary: #7a3cff; /* Purple glow */
+  --ifm-color-primary-dark: #4d00ff; /* Neon accents */
+  --ifm-color-primary-light: #a56bff; /* Lighter purple glow */
 
-  /* Custom dark mode colors for a modern tech look */
-  --ifm-background-color: #1a1a2e; /* Dark blue/purple background */
-  --ifm-background-surface-color: #16213e; /* Slightly lighter surface for cards/blocks */
+  /* Dark futuristic robotics theme colors */
+  --ifm-background-color: #0b0b0f; /* Deep space black background */
+  --ifm-background-surface-color: #111118; /* Slightly lighter background for surfaces */
   --ifm-font-color-base: #e0e0e0; /* Light gray for main text */
-  --ifm-font-color-secondary: #a0a0a0; /* Slightly darker gray for secondary text */
-  --ifm-code-background: #0f3460; /* Darker blue for code blocks */
+  --ifm-font-color-secondary: #a0a0a0; /* Gray for secondary text */
+  --ifm-code-background: #2b2b33; /* Gray metallic UI for code blocks */
   --ifm-code-font-size: 90%;
   --ifm-heading-color: #ffffff; /* White for headings */
 }
 
 /* Specific adjustments for dark mode */
 html[data-theme='dark'] {
-  --ifm-color-primary: #1e88e5;
-  --ifm-color-primary-dark: #1976d2;
-  --ifm-color-primary-darker: #1769aa;
-  --ifm-color-primary-darkest: #115293;
-  --ifm-color-primary-light: #42a5f5;
-  --ifm-color-primary-lighter: #64b5f6;
-  --ifm-color-primary-lightest: #90caf9;
+  --ifm-color-primary: #7a3cff;
+  --ifm-color-primary-dark: #4d00ff;
+  --ifm-color-primary-light: #a56bff;
 
-  --ifm-background-color: #1a1a2e;
-  --ifm-background-surface-color: #16213e;
+  --ifm-background-color: #0b0b0f;
+  --ifm-background-surface-color: #111118;
   --ifm-font-color-base: #e0e0e0;
   --ifm-font-color-secondary: #a0a0a0;
-  --ifm-code-background: #0f3460;
+  --ifm-code-background: #2b2b33;
   --ifm-heading-color: #ffffff;
 }
 
-/* Custom styles for components to enhance the modern look */
+/* Fonts */
+body {
+  font-family: 'Orbitron', 'Space Grotesk', 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Navbar and Footer Styling */
 .navbar {
-  background-color: var(--ifm-background-surface-color);
-  border-bottom: 1px solid #2e2e4a;
+  background-color: #1a1a24; /* Dark UI gray */
+  border-bottom: 1px solid var(--ifm-color-primary-dark); /* Neon accent */
+}
+
+.navbar__link:hover {
+  color: var(--ifm-color-primary-light);
 }
 
 .footer {
-  background-color: var(--ifm-background-surface-color);
+  background-color: #1a1a24; /* Dark UI gray */
+  color: var(--ifm-font-color-base);
+  border-top: 1px solid var(--ifm-color-primary-dark); /* Neon accent */
+}
+
+.footer__link-item {
   color: var(--ifm-font-color-base);
 }
 
+.footer__link-item:hover {
+  color: var(--ifm-color-primary-light);
+}
+
+/* Sidebar Styling */
 .menu__link {
   color: var(--ifm-font-color-base);
 }
 
 .menu__link--active {
-  color: var(--ifm-color-primary);
-  background-color: var(--ifm-code-background);
+  color: var(--ifm-color-primary-light);
+  background-color: rgba(122, 60, 255, 0.2); /* Subtle purple glow */
+  border-right: 3px solid var(--ifm-color-primary);
 }
 
 .theme-doc-sidebar-item-link-active {
-  color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary-light);
+  font-weight: bold;
 }
 
-/* Code block specific styling */
+/* Code Block Styling */
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #7a7a7a;
+  color: #6a737d;
 }
 
 .token.punctuation {
-  color: #c5c5c5;
+  color: #cccccc;
 }
 
 .token.property,
@@ -83,7 +100,7 @@ html[data-theme='dark'] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #ff6347; /* Tomato red for properties/numbers */
+  color: #ff6347; /* Neon accent */
 }
 
 .token.selector,
@@ -92,7 +109,7 @@ html[data-theme='dark'] {
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: #98fb98; /* Pale green for strings */
+  color: #98fb98; /* Neon accent */
 }
 
 .token.operator,
@@ -100,21 +117,40 @@ html[data-theme='dark'] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: #6a0dad; /* Dark purple for operators */
+  color: #6a0dad; /* Purple glow */
 }
 
 .token.atrule,
 .token.keyword {
-  color: #add8e6; /* Light blue for keywords */
+  color: #add8e6; /* Neon accent */
 }
 
 .token.function,
 .token.class-name {
-  color: #ffd700; /* Gold for functions/class names */
+  color: #ffd700; /* Neon accent */
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-  color: #ffa07a; /* Light salmon for regex/variables */
+  color: #ffa07a; /* Neon accent */
+}
+
+/* Subtle gradient and glow effects */
+body {
+  background: linear-gradient(to bottom right, var(--ifm-background-color), var(--ifm-background-surface-color));
+  background-attachment: fixed;
+}
+
+.navbar, .footer {
+  box-shadow: 0 0 10px rgba(122, 60, 255, 0.5);
+}
+
+.menu__list-item-collapsible {
+  background-color: rgba(77, 0, 255, 0.1);
+  border-radius: 4px;
+}
+
+.menu__link--active:hover {
+  text-shadow: 0 0 5px rgba(165, 107, 255, 0.8);
 }

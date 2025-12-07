@@ -1,96 +1,122 @@
-# Implementation Plan: Physical AI & Humanoid Robotics Textbook
+# Implementation Plan: Module-Based Textbook Structure
 
-**Branch**: `001-ai-robotics-textbook` | **Date**: 2025-12-04 | 001-ai-robotics-textbook/spec.md
-**Input**: Feature specification from `/specs/001-ai-robotics-textbook/spec.md`
+## 1. Scope and Dependencies
 
-**Note**: This template is filled in by the `/sp.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
+### In Scope:
+- Restructure all existing and future textbook content into a `docs/module-XX-name/chapter-XX-name.md` hierarchy.
+- Update all internal paths, links, and references within `.md` files, `_category_.json` files (renamed to `category.json`), and `sidebars.ts`.
+- Create new directory structures and `category.json` files for all modules (01-04).
+- For `module-04-humanoid-kinematics/` (Phase 6), only create the directory and `category.json` file; no content generation for chapter `.md` files.
 
-## Summary
+### Out of Scope:
+- Generating content for chapter `.md` files within `module-04-humanoid-kinematics/`.
+- Modifying `docusaurus.config.ts` at this stage (will be handled in Phase 7: Polish & Cross-Cutting Concerns).
+- Implementing or generating any new content beyond the structural changes.
 
-This plan outlines the creation of a full, production-ready textbook titled "Physical AI & Humanoid Robotics." The project will leverage Spec-Kit Plus and Docusaurus for structure and deployment, with Claude Code generating content. Key technical components include ROS 2, Gazebo, Unity, and NVIDIA Isaac for robotics concepts, all integrated with an MCP Server + Context7 for global knowledge management.
+### External Dependencies:
+- Existing `spec.md` for feature requirements.
+- Updated `tasks.md` for detailed task breakdown and status.
+- Docusaurus framework for path and frontmatter conventions.
 
-## Technical Context
+## 2. Key Decisions and Rationale
 
-**Language/Version**: Markdown (Docusaurus compatible), Python (for ROS 2 and Isaac Sim code samples), C# (optional for Unity examples)
-**Primary Dependencies**: Docusaurus, Spec-Kit Plus, MCP Server, Context7, ROS 2, Gazebo, Unity, NVIDIA Isaac Sim & Isaac ROS, Git/GitHub Pages
-**Storage**: Git repository (for Markdown files, assets), GitHub Pages (for deployed website)
-**Testing**: Manual review of generated content, Docusaurus build validation, execution of code samples for functionality
-**Target Platform**: Web (Docusaurus-generated static site)
-**Project Type**: Documentation/Book Project
-**Performance Goals**: Fast loading Docusaurus site, clear rendering of diagrams and code, efficient content generation by Claude Code
-**Constraints**: Adherence to Spec-Kit Plus and Docusaurus structural rules, technical accuracy, pedagogical depth (Beginner-Intermediate-Expert layers), functional code samples, use of real-world tools/hardware only
-**Scale/Scope**: Comprehensive textbook covering all modules outlined in the spec, designed for AI-native consumption and human readability.
+### Decision: Adopt Module-Chapter Hierarchy
+- **Options Considered**:
+    - Current `docs/chapters/topic/` structure.
+    - Flat `docs/topic-chapter.md` structure.
+    - Proposed `docs/module-XX-name/chapter-XX-name.md` structure.
+- **Trade-offs**:
+    - Current structure: Less organized for a multi-module textbook.
+    - Flat structure: Difficult to manage large numbers of chapters, less intuitive navigation.
+    - Proposed structure: Clearer organization, improved scalability for new modules, better aligns with Docusaurus best practices for large documentation sites, enhances user navigation and content discoverability.
+- **Rationale**: The proposed module-chapter structure significantly improves the textbook's organization, scalability, and maintainability, aligning with pedagogical and Docusaurus requirements for a comprehensive resource.
 
-## Constitution Check
+### Decision: Phased Implementation with Structure-Only for Phase 6
+- **Rationale**: To adhere to the explicit user instruction to "DO NOT implement or generate any Phase 6 content until explicitly instructed," this approach ensures compliance while preparing the necessary structural foundation for future content generation.
 
-*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
+## 3. Interfaces and API Contracts
 
-- **Accuracy First**: All content MUST be technically correct and consistent with real robotics and AI workflows. (PASS)
-- **Follow Spec-Kit Plus Structure**: All content MUST be Docusaurus-compatible Markdown and follow the Spec-Kit Plus book architecture. (PASS)
-- **No Fabrication of Tools or Libraries**: Only real frameworks (ROS 2, Gazebo, Unity, NVIDIA Isaac, etc.) and hardware (Unitree Go2, Jetson Orin Nano/NX, etc.) MUST be used. (PASS)
-- **Module-Accurate Content**: Every chapter MUST reflect the exact module, week, or topic defined in the course details. (PASS)
-- **Depth Level Requirements**: Each concept MUST be written in 3 layers: Beginner, Intermediate, Expert. (PASS)
-- **Code Fidelity**: All code samples MUST be functional (ROS 2 Python, Isaac Sim Python, etc.). (PASS)
-- **No Fictional Hardware**: Only real robots and hardware MUST be used. (PASS)
-- **Pedagogically Optimal Writing**: Every chapter MUST start with a concept map, include diagrams, use analogies, highlight common mistakes, and include exercises/assessments. (PASS)
-- **AI-Native Design**: All content SHOULD be optimized for future AI agent consumption with clear structure, minimal ambiguity, step-by-step procedures, tables, schemas, and flowcharts. (PASS)
-- **Never Violate Folder or Naming Structures**: All content MUST fit into the Spec-Kit Plus book tree (e.g., `/docs`, `/chapters`, `/modules`, `/assets`). (PASS)
+(Not applicable for this planning phase as it focuses on internal content structure and file organization, not external APIs or data contracts.)
 
-## Project Structure
+## 4. Non-Functional Requirements (NFRs) and Budgets
 
-### Documentation (this feature)
+### Performance:
+- **Goal**: Maintain efficient Docusaurus build times.
+- **Strategy**: The restructuring itself should not significantly impact build times. Large content files will be handled by Docusaurus's inherent optimization.
 
-```text
-specs/001-ai-robotics-textbook/
-├── plan.md              # This file (/sp.plan command output)
-├── research.md          # Phase 0 output (/sp.plan command)
-├── data-model.md        # Phase 1 output (/sp.plan command)
-├── quickstart.md        # Phase 1 output (/sp.plan command)
-├── contracts/           # Phase 1 output (/sp.plan command)
-└── tasks.md             # Phase 2 output (/sp.tasks command - NOT created by /sp.plan)
-```
+### Reliability:
+- **Goal**: Ensure all Docusaurus links and references remain valid after restructuring.
+- **Strategy**: Meticulous updates to internal links and `category.json` files will be performed. Docusaurus's build process will serve as a validation step for broken links.
 
-### Source Code (repository root)
+### Security:
+- **Goal**: No security implications from file restructuring.
+- **Strategy**: The changes are purely structural and content-organization related, with no impact on security.
 
-```text
-docs/
-├── intro.md
-├── _category_.json
-├── chapters/
-│   ├── ros2-fundamentals/
-│   │   ├── _category_.json
-│   │   ├── intro.md
-│   │   ├── basic-concepts.md
-│   │   └── code-examples.md
-│   ├── digital-twin/
-│   │   ├── _category_.json
-│   │   ├── intro.md
-│   │   ├── gazebo-simulation.md
-│   │   └── unity-visualization.md
-│   └── # ... other modules/chapters ...
-├── assets/
-│   ├── diagrams/
-│   │   ├── ros2-graph.drawio
-│   │   └── # ... other diagrams ...
-│   └── code-samples/
-│       ├── ros2/
-│       │   ├── publisher.py
-│       │   └── subscriber.py
-│       └── isaac-sim/
-│           ├── simple_robot.py
-│           └── # ... other code samples ...
-├── modules/
-│   ├── module1-overview.md
-│   └── # ... weekly breakdown and assessments ...
-└── README.md
-```
+### Cost:
+- **Goal**: Minimal cost impact.
+- **Strategy**: The work is primarily organizational, leveraging existing Docusaurus features.
 
-**Structure Decision**: The selected structure follows a Docusaurus-compatible organization with a `docs` folder as the root for all content. Chapters are grouped into subdirectories under `docs/chapters/`, with `_category_.json` files defining sidebar navigation. Assets (diagrams, code samples) are centralized under `docs/assets/`. Weekly breakdown and assessments will reside under `docs/modules/`.
+## 5. Data Management and Migration
 
-## Complexity Tracking
+### Source of Truth:
+- The `specs/001-ai-robotics-textbook/tasks.md` file will serve as the source of truth for the new file paths and task statuses.
+- Existing `.md` content files will be migrated to their new locations.
 
-> **Fill ONLY if Constitution Check has violations that must be justified**
+### Schema Evolution:
+- The Docusaurus file structure is evolving from a `chapters/` subdirectory to a `module-XX-name/chapter-XX-name.md` format within the `docs/` root.
+- `_category_.json` files will be updated to `category.json` and moved into their respective module directories.
 
-| Violation | Why Needed | Simpler Alternative Rejected Because |
-|-----------|------------|-------------------------------------|
-| N/A | N/A | N/A |
+### Migration and Rollback:
+- **Migration**: Content will be moved using `git mv` (conceptually, actual will be file write/delete and new file write) to preserve history where possible, or rewritten with `Write` tool if file moves are complex.
+- **Rollback**: Standard Git version control will allow for easy rollback to previous states if issues arise during restructuring.
+
+## 6. Operational Readiness
+
+### Observability:
+- **Logs**: Standard CLI output from `Bash` and `Write` tool will provide operational logs.
+- **Metrics**: Not applicable for this phase.
+- **Traces**: Not applicable for this phase.
+
+### Alerting:
+- **Thresholds**: Docusaurus build errors or broken links detected during validation will serve as alerts.
+- **On-call owners**: The user (Lead Architect) and Claude Code.
+
+### Runbooks for common tasks:
+- This plan acts as a runbook for the restructuring process.
+
+### Deployment and Rollback strategies:
+- **Deployment**: The restructured files will be committed and pushed to the GitHub repository, then deployed via GitHub Pages (handled by Docusaurus).
+- **Rollback**: Git revert functionality.
+
+### Feature Flags and compatibility:
+- Not applicable for this structural change.
+
+## 7. Risk Analysis and Mitigation
+
+### Top 3 Risks:
+
+1.  **Broken Internal Links**: Restructuring a large number of files carries a risk of breaking internal links within Docusaurus.
+    -   **Mitigation**: Meticulous updating of all internal `.md` file references and `sidebars.ts`. Docusaurus's `docusaurus build` command will be used to detect and report broken links.
+2.  **Incorrect `category.json` Configuration**: Errors in `category.json` files could lead to incorrect sidebar navigation or content display.
+    -   **Mitigation**: Careful construction of `category.json` files according to Docusaurus documentation and thorough visual inspection of the generated sidebar after a local build.
+3.  **Inadvertent Content Generation for Phase 6**: The instruction to only create structure for Phase 6 could be misinterpreted.
+    -   **Mitigation**: Explicit placeholder tasks in `tasks.md` and careful review of generated files to ensure no actual content is written for Phase 6 chapters.
+
+## 8. Evaluation and Validation
+
+### Definition of Done (tests, scans):
+- All `.md` files are in their new `docs/module-XX-name/chapter-XX-name.md` locations.
+- All `_category_.json` files are renamed to `category.json` and correctly placed.
+- `sidebars.ts` is updated to reflect the new module-chapter hierarchy.
+- A local Docusaurus build (`npm run build`) completes without errors or broken links.
+- The Docusaurus sidebar correctly displays the new module-chapter structure.
+- No content has been generated for Phase 6 chapters.
+
+### Output Validation for format/requirements/safety:
+- Markdown files adhere to Docusaurus frontmatter requirements.
+- File paths and naming conventions match the specified `module-XX-name/chapter-XX-name.md` format.
+
+## 9. Architectural Decision Record (ADR)
+
+📋 Architectural decision detected: Module-Based Textbook Structure Adoption
+   Document reasoning and tradeoffs? Run `/sp.adr Module-Based-Textbook-Structure`
