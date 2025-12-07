@@ -50,9 +50,9 @@
 - [x] T011 [US1] Generate Beginner explanation `docs/module-01-ros2-fundamentals/chapter-01-intro.md`
 - [x] T012 [US1] Generate Intermediate breakdown of core concepts `docs/module-01-ros2-fundamentals/chapter-02-basic-concepts.md`
 - [x] T013 [US1] Generate Expert depth with functional code samples `docs/module-01-ros2-fundamentals/chapter-03-code-examples.md`
-- [ ] T014 [US1] Create ROS 2 Python publisher code sample in `docs/assets/code-samples/ros2/publisher.py`
-- [ ] T015 [US1] Create ROS 2 Python subscriber code sample in `docs/assets/code-samples/ros2/subscriber.py`
-- [ ] T016 [US1] Add exercises and assessments to `docs/module-01-ros2-fundamentals/chapter-01-intro.md` and `docs/module-01-ros2-fundamentals/chapter-02-basic-concepts.md`
+- [x] T014 [US1] Create ROS 2 Python publisher code sample in `docs/assets/code-samples/ros2/publisher.py`
+- [x] T015 [US1] Create ROS 2 Python subscriber code sample in `docs/assets/code-samples/ros2/subscriber.py`
+- [x] T016 [US1] Add exercises and assessments to `docs/modules/Module 01 ROS2-Fundamentals/chapter-01-intro.md` and `docs/modules/Module 01 ROS2-Fundamentals/chapter-02-basic-concepts.md`
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -71,9 +71,9 @@
 - [x] T019 [US2] Generate Beginner explanation `docs/module-02-digital-twin/chapter-01-intro.md`
 - [x] T020 [US2] Generate Intermediate/Expert Gazebo simulation content `docs/module-02-digital-twin/chapter-02-gazebo-simulation.md`
 - [x] T021 [US2] Generate Intermediate/Expert Unity visualization content `docs/module-02-digital-twin/chapter-03-unity-visualization.md`
-- [ ] T022 [US2] Create Gazebo robot model (URDF/SDF) in `docs/assets/code-samples/gazebo/simple_robot.urdf`
-- [ ] T023 [US2] Create optional Unity C# example in `docs/assets/code-samples/unity/robot_viz.cs`
-- [ ] T024 [US2] Add exercises and assessments to `docs/module-02-digital-twin/chapter-01-intro.md` and `docs/module-02-digital-twin/chapter-02-gazebo-simulation.md`
+- [x] T022 [US2] Create Gazebo robot model (URDF/SDF) in `docs/assets/code-samples/gazebo/simple_robot.urdf`
+- [x] T023 [US2] Create optional Unity C# example in `docs/assets/code-samples/unity/robot_viz.cs`
+- [x] T024 [US2] Add exercises and assessments to `docs/modules/Module 02 Digital-Twin/chapter-01-intro.md` and `docs/modules/Module 02 Digital-Twin/chapter-02-gazebo-simulation.md`
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
@@ -114,8 +114,8 @@
 - [x] T038 [US4] Generate `docs/module-04-humanoid-kinematics/chapter-03-gait-balance.md`
 - [x] T039 [US4] Generate `docs/module-04-humanoid-kinematics/chapter-04-manipulation-control.md`
 - [x] T040 [US4] Generate `docs/module-04-humanoid-kinematics/chapter-05-advanced-applications.md`
-- [ ] T036 [US4] Create URDF model in `docs/assets/code-samples/urdf/humanoid_arm.urdf`
-- [ ] T037 [US4] Add exercises and assessments to `docs/module-04-humanoid-kinematics/chapter-01-intro.md` and `docs/module-04-humanoid-kinematics/chapter-02-forward-inverse.md`
+- [x] T036 [US4] Create URDF model in `docs/assets/code-samples/urdf/humanoid_arm.urdf`
+- [x] T037 [US4] Add exercises and assessments to `docs/modules/Module 04 Humanoid-Kinematics/chapter-01-intro.md` and `docs/modules/Module 04 Humanoid-Kinematics/chapter-02-forward-inverse.md`
 
 ---
 
