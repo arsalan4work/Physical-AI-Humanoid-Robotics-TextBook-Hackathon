@@ -1,10 +1,10 @@
 # Hackathon I — Physical AI & Humanoid Robotics Textbook
 
-Welcome to the **Physical AI & Humanoid Robotics Textbook** project, created as part of the Panaversity Hackathon. This AI-native textbook represents a revolutionary approach to robotics education, combining cutting-edge technology with comprehensive learning resources.
+Welcome to the **Physical AI & Humanoid Robotics Textbook** project, created as part of the GIAIC Hackathon. This AI-native textbook represents a revolutionary approach to robotics education, combining cutting-edge technology with comprehensive learning resources.
 
 ## 🎯 Project Overview
 
-This hackathon project aims to create a comprehensive, AI-native textbook for Physical AI and Humanoid Robotics. The project embodies Panaversity's vision of AI-driven education and collaborative development using state-of-the-art tools and methodologies.
+This hackathon project aims to create a comprehensive, AI-native textbook for Physical AI and Humanoid Robotics. The project embodies GIAIC's vision of AI-driven education and collaborative development using state-of-the-art tools and methodologies.
 
 ### Key Features
 - **Docusaurus-powered Book**: Interactive, searchable, and responsive textbook platform
@@ -114,11 +114,6 @@ physical-ai-and-humanoid-robotics-text-book/
 ### Project Delivery
 - **GitHub Repository:** [Physical AI & Humanoid Robotics Textbook](https://github.com/arsalan4work/physical-ai-and-humanoid-robotics-text-book)
 - **Live Book:** [Book Link](https://arsalan4work.github.io/physical-ai-and-humanoid-robotics-text-book/)
-- **Demo Video:** 90-second presentation available in repository
-
-### Presentation Details
-- **Zoom Presentation:** Available upon request
-- **Contact:** WhatsApp contact information available in repository
 
 ## 🤝 Contributing
 
@@ -135,7 +130,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgements
 
-- **Panaversity** for the hackathon opportunity and vision
+- **GIAIC** for the hackathon opportunity and vision
 - **Open Robotics** for ROS 2 and related tools
 - **Open Source Community** for Docusaurus and supporting libraries
 - **AI Development Tools** including Claude Code and Spec-Kit Plus
@@ -145,4 +140,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 *Created with ❤️ for the future of AI-native education*
 
 **Hackathon I - Physical AI & Humanoid Robotics**
-*Panaversity Initiative*
+*GIAIC Initiative*
