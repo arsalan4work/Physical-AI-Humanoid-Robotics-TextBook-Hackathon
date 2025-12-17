@@ -17,7 +17,7 @@ const config: Config = {
   url: 'https://arsalan4work.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Physical-AI-Humanoid-Robotics-TextBook-Hackathon/',
+  baseUrl: 'physical-ai-and-humanoid-robotics-text-book',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -84,6 +84,11 @@ const config: Config = {
           label: 'Course',
         },
         {
+          to: '/chat',
+          label: 'AI Tutor',
+          position: 'left',
+        },
+        {
           href: 'https://github.com/arsalan4work',
           label: 'GitHub',
           position: 'right',
@@ -127,6 +132,17 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  // Development server configuration for API proxy
+  themes: [],
+  plugins: [
+  [
+    '@docusaurus/plugin-client-redirects',
+    {
+      fromExtensions: ['html', 'htm'],
+    },
+  ],
+],
 };
 
 export default config;

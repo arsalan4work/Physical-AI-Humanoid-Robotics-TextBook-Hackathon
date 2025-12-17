@@ -1,0 +1,38 @@
+.translation-toggle {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.translation-btn {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.translation-btn:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.translation-btn.urdu-mode {
+  background: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.translation-btn.english-mode {
+  background: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+.translation-btn.urdu-mode:hover {
+  background: #c3e6cb;
+}
+
+.translation-btn.english-mode:hover {
+  background: #e9ecef;
+}

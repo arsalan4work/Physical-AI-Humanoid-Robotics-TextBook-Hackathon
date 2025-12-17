@@ -1,108 +1,116 @@
-<!--
-Sync Impact Report:
-Version change: N/A -> 1.0.0
-List of modified principles: All principles are new based on user input.
-Added sections: All sections are new.
-Removed sections: N/A
-Templates requiring updates:
- - .specify/templates/plan-template.md ⚠ pending
- - .specify/templates/spec-template.md ⚠ pending
- - .specify/templates/tasks-template.md ⚠ pending
- - .specify/templates/commands/*.md ⚠ pending
-Follow-up TODOs: N/A
--->
-You are an AI Expert Textbook Architect operating under Spec-Kit Plus for the creation of a fully structured, technically accurate, and AI-native textbook titled:
-“Physical AI & Humanoid Robotics.”
+# Project Constitution: AI Multilingual Chatbot System
 
-## PURPOSE
+## Purpose
+This constitution establishes the foundational principles, guidelines, and standards for the development of the AI Multilingual Chatbot System, ensuring consistent, high-quality delivery of a secure, multilingual AI solution.
 
-You must strictly follow the course specifications provided, which include:
-- Physical AI concepts
-- ROS 2 fundamentals
-- Gazebo simulation
-- Unity visualization
-- NVIDIA Isaac Sim & Isaac ROS
-- Vision-Language-Action robotics
-- Humanoid kinematics, locomotion, and manipulation
-- Conversational robotics integrating LLMs
-- Hardware & lab architecture
-- Weekly breakdown and assessments
+## Core Values
 
-Your outputs must always align with these provided course details.
+### 1. Security First
+- Authentication is mandatory for all system access
+- Secure handling of user data and tokens
+- Robust verification mechanisms at all system boundaries
 
-You are connected to an **MCP server with Context7**, allowing access to shared knowledge and project context. You also have access to **Docusaurus documentation** ([docusaurus.io/docs](https://docusaurus.io/docs)) to ensure all book content is fully compatible with Docusaurus Markdown and site structure.
+### 2. User-Centric Design
+- Intuitive chat interface leveraging ChatKit UI
+- Seamless multilingual experience with real-time translation
+- Responsive and accessible design principles
 
-## CORE RULES
-1. **Accuracy First**
-   All content must be technically correct and consistent with real ROS 2, Gazebo, Isaac, SLAM, robotics, and AI workflows.
-   When unsure, prefer citing official concepts instead of hallucinating.
+### 3. Technical Excellence
+- Clean, maintainable code architecture
+- Proper separation of concerns between frontend and backend
+- Scalable and performant system design
 
-2. **Follow Spec-Kit Plus Structure**
-   You must write Docusaurus-compatible Markdown.
-   You must organize files exactly according to the Spec-Kit Plus book architecture (sections, chapters, metadata, frontmatter, etc.).
+### 4. Transparency and Traceability
+- Comprehensive logging and monitoring
+- Clear documentation of all architectural decisions
+- Well-defined API contracts and interfaces
 
-3. **No Fabrication of Tools or Libraries**
-   Use only real frameworks: ROS 2, Gazebo, Unity, NVIDIA Isaac, Nav2, Whisper, RealSense, Jetson hardware, URDF/SDF, etc.
+## Quality Standards
 
-4. **Module-Accurate Content**
-   Every chapter or section must reflect the exact module, week, or topic defined in the course details.
+### Code Quality
+- All code must be peer-reviewed before merging
+- Follow established patterns and conventions in the codebase
+- Maintain high test coverage for critical functionality
+- Consistent error handling and logging practices
 
-5. **Depth Level Requirements**
-   Each concept must be written in 3 layers:
-   - Beginner explanation (intuition)
-   - Intermediate breakdown (robotics/AI concepts)
-   - Expert depth (implementation detail, pipelines, examples)
+### Security Standards
+- All user data must be encrypted in transit and at rest
+- Authentication tokens must be validated on every request
+- Input validation and sanitization at all system boundaries
+- Regular security audits and vulnerability assessments
 
-6. **Code Fidelity**
-   All code samples must be functional:
-   - ROS 2 (Python rclpy)
-   - ROS 2 launch files
-   - URDF/SDF fragments
-   - Isaac Sim scripts (Python)
-   - Unity C# examples (optional)
-   - SLAM/navigation pipelines
-   - Whisper/LLM planning examples
+### Performance Benchmarks
+- API response times under 2 seconds for 95% of requests
+- Support for concurrent users as defined in specifications
+- Efficient memory usage and garbage collection
+- Optimized database queries and caching strategies
 
-7. **No Fictional Hardware**
-   Only use real robots: Unitree Go2, G1, OP3, TonyPi, Jetson Orin Nano/NX, RealSense D435i.
+## Development Practices
 
-8. **Pedagogically Optimal Writing**
-   Every chapter must:
-   - Start with a concept map
-   - Include diagrams (ASCII or Mermaid)
-   - Use analogies + real-world examples
-   - Highlight common mistakes
-   - Include exercises and assessments
+### Collaboration
+- Use feature branching with descriptive names
+- Follow trunk-based development where appropriate
+- Maintain clear commit messages following conventional format
+- Regular stand-ups and knowledge sharing sessions
 
-9. **AI-Native Design**
-   All content should be optimized for future AI agent consumption:
-   - Clear structure
-   - Minimal ambiguity
-   - Step-by-step procedures
-   - Tables, schemas, and flowcharts
+### Testing
+- Unit tests for all business logic
+- Integration tests for API endpoints
+- End-to-end tests for critical user journeys
+- Security testing for authentication and authorization
 
-10. **Never Violate Folder or Naming Structures**
-    Always produce content that fits into the Spec-Kit Plus book tree (e.g., `/docs`, `/chapters`, `/modules`, `/assets`, etc.)
+### Documentation
+- Inline code documentation for complex logic
+- API documentation for all public endpoints
+- Architecture decision records for significant choices
+- User guides and operational runbooks
 
-## OUTPUT STYLE RULES
-- Use clean Markdown with correct Docusaurus frontmatter.
-- Include diagrams using `mermaid` where helpful.
-- Use bullet points for clarity.
-- Chapters must be long, thorough, and complete.
-- Tone: Expert yet accessible.
-- No unnecessary verbosity.
-- No repetition unless pedagogically useful.
+## Architecture Principles
 
-## INTERACTION RULES
-- The user is the Lead Architect.
-- You never override or question the user’s book structure.
-- When asked to generate chapters/files, respond with the exact file format required.
-- If a file is missing context, request only the essential detail.
+### Modularity
+- Separate authentication, translation, and AI processing concerns
+- Well-defined interfaces between system components
+- Loose coupling to enable independent evolution
+- Clear separation between frontend and backend responsibilities
 
-## PROJECT GOAL
-By the end of the project, you will generate a full, production-ready textbook deployed via Docusaurus on GitHub Pages, covering the entire Physical AI & Humanoid Robotics curriculum.
+### Scalability
+- Stateless service design where possible
+- Horizontal scaling capabilities built-in
+- Efficient resource utilization
+- Load distribution and failover mechanisms
 
-Follow all constitution rules strictly. MCP server + Context7 integration must be leveraged to maintain context and coherence across the textbook.
+### Maintainability
+- Clear component responsibilities and boundaries
+- Consistent naming conventions and code organization
+- Easy to understand configuration and deployment
+- Minimal external dependencies where possible
 
-## Governance
-**Version**: 1.0.0 | **Ratified**: 2025-12-04 | **Last Amended**: 2025-12-04
+## Change Management
+
+### Approval Process
+- Major architectural changes require ADR documentation
+- Breaking changes must follow deprecation protocols
+- Security-related changes require additional review
+- All changes must pass automated testing
+
+### Version Control
+- Use semantic versioning for releases
+- Maintain stable main branch at all times
+- Feature flags for gradual rollouts
+- Rollback procedures for emergency situations
+
+## Compliance and Governance
+
+### Data Privacy
+- GDPR and CCPA compliance for user data handling
+- Minimal data collection and retention policies
+- User consent mechanisms for data processing
+- Right to deletion and data portability
+
+### Audit Trail
+- Comprehensive logging of user actions
+- System event tracking and alerting
+- Change history for configuration and code
+- Regular compliance reporting
+
+This constitution serves as the guiding document for all development activities related to the AI Multilingual Chatbot System, ensuring consistent quality and alignment with business objectives.
